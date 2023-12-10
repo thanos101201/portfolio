@@ -71,11 +71,29 @@ function About() {
     })
   }
 
+  const renderTech = () => {
+    const tech = [ 'Python', 'Javascript', 'React JS', 'Node JS', 'Express JS', 'GraphQL', 'MySQL', 'SQL', 'Mongo DB', 'Docker', 'Kubernetes', 'React Native' ]
+
+    return tech.map((e,key) => {
+      return(
+        <div key={key} className='col-12 col-md-3'>
+          <Card style={{backgroundColor:'black'}}>
+            <CardHeader>
+              <CardTitle>
+                <h5 style={{color:'white'}}>{e}</h5>
+              </CardTitle>
+            </CardHeader>
+          </Card>
+        </div>
+      );
+    })
+  }
+
   return (
     <div style={{backgroundColor: 'black'}}>
       <NavComponent />
       <div className='container'>
-        <div className='rod d-flex justify-content-center'>
+        <div className='row d-flex justify-content-center'>
           <div className='col-12 col-md-8 d-flex align-items-center'>
             <h4 style={{color:'white'}}>Work Experience</h4>
           </div>
@@ -175,7 +193,7 @@ function About() {
         <br></br>
         <br></br>
         <br></br>
-        <div className='rod d-flex justify-content-center'>
+        <div className='row d-flex justify-content-center'>
           <div className='col-12 col-md-8 d-flex align-items-center'>
             <h4 style={{color:'white'}}>Awards and Accomplishments</h4>
           </div>
@@ -230,7 +248,17 @@ function About() {
         <br></br>
         <br></br>
         <br></br>
-        <div className='rod d-flex justify-content-center'>
+        <div className='row d-flex justify-content-center'>
+          <div className='col-12 col-md-8 d-flex align-items-center'>
+            <h4 style={{color:'white'}}>Tech Stack</h4>
+          </div>
+        </div>
+        <div className='row d-flex justify-content-center'>
+          {renderTech()}
+        </div>
+        <br></br>
+        <br></br>
+        <div className='row d-flex justify-content-center'>
           <div className='col-12 col-md-8 d-flex align-items-center'>
             <h4 style={{color:'white'}}>Projects</h4>
           </div>
