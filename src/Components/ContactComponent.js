@@ -11,7 +11,7 @@ function Contact() {
   const [ body, setBody ] = useState("");
 
   return (
-    <div style={{backgroundColor:'black', width:'100%', height:'100%'}}>
+    <div style={{backgroundColor:'black', margin:'0', padding:'0', backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}>
       <NavComponent />
       <div className='container'>
         <div className='row d-flex justify-content-center'>

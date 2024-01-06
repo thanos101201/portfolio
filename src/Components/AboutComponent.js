@@ -6,7 +6,10 @@ import Sarvaha from '../assets/sarvaha.jpg';
 import Dalhousie from '../assets/Dalhousie.png';
 import SIH from '../assets/sih.png';
 import Aeons from '../assets/Aeons.jpg';
-
+import Tada from 'react-reveal/Tada';
+import Zoom from 'react-reveal/Zoom';
+import RubberBand from 'react-reveal/RubberBand';
+import Jello from 'react-reveal/Jello';
 function About() {
 
   const project = [
@@ -71,54 +74,56 @@ function About() {
   const renderProjects = () => {
     return project.map((e,key) => {
       return(
-        <div className='col-12 col-md-5 col-xl-3 d-flex align-items-center m-3'>
-          <Card style={{backgroundColor:'black', boxShadow:'0 0 10px rgba(255, 255, 255, 1)', width: '190%', height: '100%', alignContent:'center'}}>
-            <CardHeader>
-              <CardTitle>
-                <h3 style={{color:'white'}}>
-                  {e.title}
-                </h3>
-              </CardTitle>
-            </CardHeader>
-            <CardBody style={{alignContent:'center'}}>
-              <p style={{color:'white'}}>
-                {e.Description}
-              </p>
-              <ul>
-                <li className='mt-2'>
-                  <div className='row d-flex justify-content-left'>
-                    <div className='col-10 col-md-6 col-lg-8 col-xl-6 d-flex align-items-center'>
-                      <Label style={{color:'white'}}><strong>Tech Stack :</strong></Label>
+        <RubberBand>
+          <div className='col-12 col-md-5 col-xl-3 d-flex align-items-center m-3'>
+            <Card style={{backgroundColor:'black', boxShadow:'0 0 10px rgba(255, 255, 255, 1)', width: '190%', height: '100%', alignContent:'center'}}>
+              <CardHeader>
+                <CardTitle>
+                  <h3 style={{color:'white'}}>
+                    {e.title}
+                  </h3>
+                </CardTitle>
+              </CardHeader>
+              <CardBody style={{alignContent:'center'}}>
+                <p style={{color:'white'}}>
+                  {e.Description}
+                </p>
+                <ul>
+                  <li className='mt-2'>
+                    <div className='row d-flex justify-content-left'>
+                      <div className='col-10 col-md-6 col-lg-8 col-xl-6 d-flex align-items-center'>
+                        <Label style={{color:'white'}}><strong>Tech Stack :</strong></Label>
+                      </div>
+                      <div className='col-10 col-md-6 col-lg-8 col-xl-6 d-flex align-items-center'>
+                        <Label style={{color:'white'}}><strong>{e.Techstack}</strong></Label>
+                      </div>
                     </div>
-                    <div className='col-10 col-md-6 col-lg-8 col-xl-6 d-flex align-items-center'>
-                      <Label style={{color:'white'}}><strong>{e.Techstack}</strong></Label>
+                  </li>
+                  <li>
+                    <div className='row d-flex justify-content-left'>
+                      <div className='col-10 col-md-6 d-flex align-items-center'>
+                        <Label style={{color:'white'}}><strong>Location :</strong></Label>
+                      </div>
+                      <div className='col-10 col-md-6 d-flex align-items-center'>
+                        <Label style={{color:'white'}}><strong>{e.Location}</strong></Label>
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div className='row d-flex justify-content-left'>
-                    <div className='col-10 col-md-6 d-flex align-items-center'>
-                      <Label style={{color:'white'}}><strong>Location :</strong></Label>
+                  </li>
+                  <li>
+                    <div className='row d-flex justify-content-left gx-5'>
+                      <div className='col-10 col-md-6 d-flex align-items-center'>
+                        <Label style={{color:'white'}}><strong>Role :</strong></Label>
+                      </div>
+                      <div className='col-10 col-md-6 d-flex align-items-center'>
+                        <Label style={{color:'white'}}><strong>{e.Role}</strong></Label>
+                      </div>
                     </div>
-                    <div className='col-10 col-md-6 d-flex align-items-center'>
-                      <Label style={{color:'white'}}><strong>{e.Location}</strong></Label>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className='row d-flex justify-content-left gx-5'>
-                    <div className='col-10 col-md-6 d-flex align-items-center'>
-                      <Label style={{color:'white'}}><strong>Role :</strong></Label>
-                    </div>
-                    <div className='col-10 col-md-6 d-flex align-items-center'>
-                      <Label style={{color:'white'}}><strong>{e.Role}</strong></Label>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </CardBody>
-          </Card>
-        </div>
+                  </li>
+                </ul>
+              </CardBody>
+            </Card>
+          </div>
+        </RubberBand>
       );
     })
   }
@@ -150,95 +155,103 @@ function About() {
             <h4 style={{color:'white'}}>Work Experience</h4>
           </div>
         </div>
-        <div className='row d-flex justify-content-center m-3'>
-          <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
-            <Card className='shadow' style={{height:'4rem', width:'4rem', backgroundColor:'black'}}>
-              <CardHeader>
-                <CardImg style={{height:'4rem', width:'4rem'}} src={Sarvaha} />
-              </CardHeader>
-            </Card>
+        <Tada>
+          <div className='row d-flex justify-content-center m-3'>
+            <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
+              <Card className='shadow' style={{height:'4rem', width:'4rem', backgroundColor:'black'}}>
+                <CardHeader>
+                  <CardImg style={{height:'4rem', width:'4rem'}} src={Sarvaha} />
+                </CardHeader>
+              </Card>
+            </div>
+            <div className='col-10 col-md-8 d-flex align-items-center'>
+              <p style={{color:'white'}}>
+                <h4>Sarvaha Systems</h4>
+                <h5>Software Development Engineer</h5>
+                <h6><i>July 2023</i> to <i>Present</i></h6>
+                Responsibilities :
+                <ul>
+                  <li>Design structure of plugin which will be integrated to the monitoring system</li>
+                  <li>Implement the designed plugin and integrate the plugin to the monitoing system</li>
+                  <li>Maintain the fitness game application</li>
+                  <li>Tech stack : ASP.NET, React Js, Node JS, Express JS, Mongo DB, MySQL, Docker, Kubernetes, Convolutional Neural Network</li>
+                </ul>
+              </p>
+            </div>
           </div>
-          <div className='col-10 col-md-8 d-flex align-items-center'>
-            <p style={{color:'white'}}>
+        </Tada>
+        <Tada>
+          <div className='row d-flex justify-content-center m-3'>
+            <div className='col-10 col-md-8 m-3 d-flex align-items-center'>
+              <p style={{color:'white'}}>
+              <h4>Aeons Technologies</h4>
+                <h5>Co-Founder</h5>
+                <h6><i>Augst 2023</i> to <i>Present</i></h6>
+                Responsibilities :
+                <ul>
+                  <li>Manage the client products as well as design the solutions based on the client requirements</li>
+                  <li>Manage the development of the solution based on the proposed design based on the client requirement</li>
+                  <li>Tech stack and paradigms : DevOps, Git, React Js, Node JS, Express JS, Mongo DB, MySQL, Docker, Kubernetes, Convolutional Neural Network</li>
+                </ul>
+              </p>
+            </div>
+            <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
+              <Card style={{height:'4rem', width:'4rem', backgroundColor:'black'}}>
+                <CardHeader>
+                  <CardImg style={{height:'4rem', width:'4rem'}} src={Aeons} />
+                </CardHeader>
+              </Card>
+            </div>
+          </div>
+        </Tada>
+        <Tada>
+          <div className='row d-flex justify-content-center m-3'>
+            <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
+              <Card style={{height:'4rem', width:'4rem', backgroundColor:'black'}}>
+                <CardHeader>
+                  <CardImg style={{height:'4rem', width:'4rem'}} src={Sarvaha} />
+                </CardHeader>
+              </Card>
+            </div>
+            <div className='col-10 col-md-8 m-3 d-flex align-items-center'>
+              <p style={{color:'white'}}>
               <h4>Sarvaha Systems</h4>
-              <h5>Software Development Engineer</h5>
-              <h6><i>July 2023</i> to <i>Present</i></h6>
-              Responsibilities :
-              <ul>
-                <li>Design structure of plugin which will be integrated to the monitoring system</li>
-                <li>Implement the designed plugin and integrate the plugin to the monitoing system</li>
-                <li>Maintain the fitness game application</li>
-                <li>Tech stack : ASP.NET, React Js, Node JS, Express JS, Mongo DB, MySQL, Docker, Kubernetes, Convolutional Neural Network</li>
-              </ul>
-            </p>
+                <h5>Software Development Intern</h5>
+                <h6><i>January 2023</i> to <i>July 2023</i></h6>
+                Responsibilities :
+                <ul>
+                  <li>Develop accelerator modules for tracking the usage of different IT services and assets done by any organization</li>
+                  <li>Test and maintain the accelerator modules based on different real life scenarios</li>
+                  <li>Tech stack and paradigms : DevOps, Git, Python, Tensorflow Docker, Kubernetes, Convolutional Neural Network</li>
+                </ul>
+              </p>
+            </div>
           </div>
-        </div>
-        <div className='row d-flex justify-content-center m-3'>
-          <div className='col-10 col-md-8 m-3 d-flex align-items-center'>
-            <p style={{color:'white'}}>
-            <h4>Aeons Technologies</h4>
-              <h5>Co-Founder</h5>
-              <h6><i>Augst 2023</i> to <i>Present</i></h6>
-              Responsibilities :
-              <ul>
-                <li>Manage the client products as well as design the solutions based on the client requirements</li>
-                <li>Manage the development of the solution based on the proposed design based on the client requirement</li>
-                <li>Tech stack and paradigms : DevOps, Git, React Js, Node JS, Express JS, Mongo DB, MySQL, Docker, Kubernetes, Convolutional Neural Network</li>
-              </ul>
-            </p>
+        </Tada>
+        <Tada>
+          <div className='row d-flex justify-content-center m-3'>
+            <div className='col-10 col-md-8 m-3 d-flex align-items-center'>
+              <p style={{color:'white'}}>
+              <h4>Dalhousie University, Halifax Canada</h4>
+                <h5>Research Intern</h5>
+                <h6><i>June 2022</i> to <i>September 2022</i></h6>
+                Responsibilities :
+                <ul>
+                  <li>Develop mobile game to promote physical activities among different individuals of different age group</li>
+                  <li>Manage the data gathered by the game, and prepare it for analysis</li>
+                  <li>Tech stack : React Native, Express Js, Node JS, Google Apis, Mongo Db</li>
+                </ul>
+              </p>
+            </div>
+            <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
+              <Card style={{height:'4rem', width:'4rem', backgroundColor:'black'}}>
+                <CardHeader>
+                  <CardImg style={{height:'6rem', width:'6rem'}} src={Dalhousie} />
+                </CardHeader>
+              </Card>
+            </div>
           </div>
-          <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
-            <Card style={{height:'4rem', width:'4rem', backgroundColor:'black'}}>
-              <CardHeader>
-                <CardImg style={{height:'4rem', width:'4rem'}} src={Aeons} />
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
-        <div className='row d-flex justify-content-center m-3'>
-          <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
-            <Card style={{height:'4rem', width:'4rem', backgroundColor:'black'}}>
-              <CardHeader>
-                <CardImg style={{height:'4rem', width:'4rem'}} src={Sarvaha} />
-              </CardHeader>
-            </Card>
-          </div>
-          <div className='col-10 col-md-8 m-3 d-flex align-items-center'>
-            <p style={{color:'white'}}>
-            <h4>Sarvaha Systems</h4>
-              <h5>Software Development Intern</h5>
-              <h6><i>January 2023</i> to <i>July 2023</i></h6>
-              Responsibilities :
-              <ul>
-                <li>Develop accelerator modules for tracking the usage of different IT services and assets done by any organization</li>
-                <li>Test and maintain the accelerator modules based on different real life scenarios</li>
-                <li>Tech stack and paradigms : DevOps, Git, Python, Tensorflow Docker, Kubernetes, Convolutional Neural Network</li>
-              </ul>
-            </p>
-          </div>
-        </div>
-        <div className='row d-flex justify-content-center m-3'>
-          <div className='col-10 col-md-8 m-3 d-flex align-items-center'>
-            <p style={{color:'white'}}>
-            <h4>Dalhousie University, Halifax Canada</h4>
-              <h5>Research Intern</h5>
-              <h6><i>June 2022</i> to <i>September 2022</i></h6>
-              Responsibilities :
-              <ul>
-                <li>Develop mobile game to promote physical activities among different individuals of different age group</li>
-                <li>Manage the data gathered by the game, and prepare it for analysis</li>
-                <li>Tech stack : React Native, Express Js, Node JS, Google Apis, Mongo Db</li>
-              </ul>
-            </p>
-          </div>
-          <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
-            <Card style={{height:'4rem', width:'4rem', backgroundColor:'black'}}>
-              <CardHeader>
-                <CardImg style={{height:'6rem', width:'6rem'}} src={Dalhousie} />
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
+        </Tada>
         <br></br>
         <br></br>
         <br></br>
@@ -247,47 +260,49 @@ function About() {
             <h4 style={{color:'white'}}>Awards and Accomplishments</h4>
           </div>
         </div>
-        <div className='row d-flex justify-content-center m-3'>
-          <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
-            <Card style={{height:'4rem', width:'4rem', backgroundColor:'black'}}>
-              <CardHeader>
-                <CardImg style={{height:'4rem', width:'4rem'}} src={SIH} />
-              </CardHeader>
-            </Card>
+        <Jello>
+          <div className='row d-flex justify-content-center m-3'>
+            <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
+              <Card style={{height:'4rem', width:'4rem', backgroundColor:'black'}}>
+                <CardHeader>
+                  <CardImg style={{height:'4rem', width:'4rem'}} src={SIH} />
+                </CardHeader>
+              </Card>
+            </div>
+            <div className='col-10 col-md-8 m-3 d-flex align-items-center'>
+              <p style={{color:'white'}}>
+              <h5>Smart India Hackathon 2022</h5>
+                Responsibilities :
+                <ul>
+                  <li>Develop mechanism for spreading information related to government schemes in rural areas of India</li>
+                  <li>Manage the data gathered by the game, and prepare it for analysis</li>
+                  <li>Tech stack : React Native, Express Js, Node JS, Google Apis, Mongo Db</li>
+                </ul>
+              </p>
+            </div>
           </div>
-          <div className='col-10 col-md-8 m-3 d-flex align-items-center'>
+          <br></br>
+          <div className='row d-flex justify-content-center m-3'>
+            <div className='col-10 col-md-8 m-3 d-flex align-items-center'>
             <p style={{color:'white'}}>
-            <h5>Smart India Hackathon 2022</h5>
-              Responsibilities :
-              <ul>
-                <li>Develop mechanism for spreading information related to government schemes in rural areas of India</li>
-                <li>Manage the data gathered by the game, and prepare it for analysis</li>
-                <li>Tech stack : React Native, Express Js, Node JS, Google Apis, Mongo Db</li>
-              </ul>
-            </p>
+              <h5>Smart India Hackathon 2020</h5>
+                Responsibilities :
+                <ul>
+                  <li>Develop voice based interface for enabling access of website of Ministry of Rural Development, India for physically disabled persons</li>
+                  <li>Gathering data from the website of Ministry of Rural Development and integrating the data with the interface</li>
+                  <li>Tech stack : Python, Flask, Django, Beautiful Soup</li>
+                </ul>
+              </p>
+            </div>
+            <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
+              <Card style={{height:'4rem', width:'4rem', backgroundColor:'black'}}>
+                <CardHeader>
+                  <CardImg style={{height:'4rem', width:'4rem'}} src={SIH} />
+                </CardHeader>
+              </Card>
+            </div>
           </div>
-        </div>
-        <br></br>
-        <div className='row d-flex justify-content-center m-3'>
-          <div className='col-10 col-md-8 m-3 d-flex align-items-center'>
-          <p style={{color:'white'}}>
-            <h5>Smart India Hackathon 2020</h5>
-              Responsibilities :
-              <ul>
-                <li>Develop voice based interface for enabling access of website of Ministry of Rural Development, India for physically disabled persons</li>
-                <li>Gathering data from the website of Ministry of Rural Development and integrating the data with the interface</li>
-                <li>Tech stack : Python, Flask, Django, Beautiful Soup</li>
-              </ul>
-            </p>
-          </div>
-          <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
-            <Card style={{height:'4rem', width:'4rem', backgroundColor:'black'}}>
-              <CardHeader>
-                <CardImg style={{height:'4rem', width:'4rem'}} src={SIH} />
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
+        </Jello>
         <br></br>
         <br></br>
         <br></br>
@@ -297,7 +312,9 @@ function About() {
           </div>
         </div>
         <div className='row d-flex justify-content-center'>
-          {renderTech()}
+          <Zoom>
+            {renderTech()}
+          </Zoom>
         </div>
         <br></br>
         <br></br>
