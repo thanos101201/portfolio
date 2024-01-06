@@ -1,7 +1,7 @@
 import React from 'react'
 import NavComponent from './NavComponent'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { CardHeader, Card, CardImg, CardTitle, CardBody, CardText } from 'reactstrap'
+import { CardHeader, Card, CardImg, CardTitle, CardBody, CardText, Label } from 'reactstrap'
 import Sarvaha from '../assets/sarvaha.jpg';
 import Dalhousie from '../assets/Dalhousie.png';
 import SIH from '../assets/sih.png';
@@ -11,48 +11,68 @@ function About() {
 
   const project = [
     {
-      title: 'Title',
-      Description : 'dfjvndfnjsdjovn jfbv sjdfkvnjdsf jefbvjdfvnjdlsfnvjsdfvjksdfjvnsdfjvnsd kdsjfv sdjfv djofvjd vjsdf vjksdfvjks dfkjbsdfjbv sdo bjdkbsd'
+      title: 'Easy Monitoring Agent',
+      Description : 'Application to monitor various electronic devices/sensors connected to in a network at a remote location',
+      Techstack : 'Asp.Net Core, Blazor, Entity Framework',
+      Location : 'Sarvaha Systems',
+      Role: 'Full stack Developer'
     },
     {
-      title: 'Title',
-      Description : 'dfjvndfnjsdjovn jfbv sjdfkvnjdsf jefbvjdfvnjdlsfnvjsdfvjksdfjvnsdfjvnsd kdsjfv sdjfv djofvjd vjsdf vjksdfvjks dfkjbsdfjbv sdo bjdkbsd'
+      title: 'IT Asset Management Software',
+      Description : 'Application to manage and track the usage of different IT Services and Asset of any organization',
+      Techstack : 'Python, Flask',
+      Location : 'Sarvaha Systems',
+      Role: 'Backend Developer'
     },
     {
-      title: 'Title',
-      Description : 'dfjvndfnjsdjovn jfbv sjdfkvnjdsf jefbvjdfvnjdlsfnvjsdfvjksdfjvnsdfjvnsd kdsjfv sdjfv djofvjd vjsdf vjksdfvjks dfkjbsdfjbv sdo bjdkbsd'
+      title: 'Step Game',
+      Description : 'Game for the employees of Sarvaha System to promote physical activities',
+      Techstack : 'React Js, Mongo DB, Express Js, Node Js, Google Apis',
+      Location : 'Sarvaha Systems',
+      Role: 'Full stack Developer'
     },
     {
-      title: 'Title',
-      Description : 'dfjvndfnjsdjovn jfbv sjdfkvnjdsf jefbvjdfvnjdlsfnvjsdfvjksdfjvnsdfjvnsd kdsjfv sdjfv djofvjd vjsdf vjksdfvjks dfkjbsdfjbv sdo bjdkbsd'
+      title: 'Step Game',
+      Description : 'Game for promoting physical activites among different individuals and gathering their vote data for research purpose',
+      Techstack : 'React Native, Mongo DB, Express Js, Node Js, Google Apis',
+      Location : 'Dalhousie University',
+      Role: 'Full stack Developer'
     },
     {
-      title: 'Title',
-      Description : 'dfjvndfnjsdjovn jfbv sjdfkvnjdsf jefbvjdfvnjdlsfnvjsdfvjksdfjvnsdfjvnsd kdsjfv sdjfv djofvjd vjsdf vjksdfvjks dfkjbsdfjbv sdo bjdkbsd'
+      title: 'Restaurant Automation System',
+      Description : 'Application to automate the operations carried out at any restaurant',
+      Techstack : 'React Js, Mongo Db, Express Js, Node Js, Git',
+      Location : 'Shri Guru Gobind Singhji Institute of Engineering and Technology',
+      Role: 'Full stack Developer'
     },
     {
-      title: 'Title',
-      Description : 'dfjvndfnjsdjovn jfbv sjdfkvnjdsf jefbvjdfvnjdlsfnvjsdfvjksdfjvnsdfjvnsd kdsjfv sdjfv djofvjd vjsdf vjksdfvjks dfkjbsdfjbv sdo bjdkbsd'
+      title: 'Capture',
+      Description : 'Application for connecting friends and file sharing',
+      Techstack : 'React Js, MySql Db, Express Js, Node Js, Git' ,
+      Location: 'Shri Guru Gobind Singhji Institute of Engineering and Technology',
+      Role: 'Full stack Developer'
     },
     {
-      title: 'Title',
-      Description : 'dfjvndfnjsdjovn jfbv sjdfkvnjdsf jefbvjdfvnjdlsfnvjsdfvjksdfjvnsdfjvnsd kdsjfv sdjfv djofvjd vjsdf vjksdfvjks dfkjbsdfjbv sdo bjdkbsd'
+      title: 'RNXG Website',
+      Description : 'Website for the official website for the official robotics club of Shri Guru Gobind Singhji Institute of Engineering and Technology',
+      Techstack: 'React Js, Material UI' ,
+      Location : 'Shri Guru Gobind Singhji Institue of Engineering and Technology',
+      Role: 'Frontend Developer'
     },
     {
-      title: 'Title',
-      Description : 'dfjvndfnjsdjovn jfbv sjdfkvnjdsf jefbvjdfvnjdlsfnvjsdfvjksdfjvnsdfjvnsd kdsjfv sdjfv djofvjd vjsdf vjksdfvjks dfkjbsdfjbv sdo bjdkbsd'
-    },
-    {
-      title: 'Title',
-      Description : 'dfjvndfnjsdjovn jfbv sjdfkvnjdsf jefbvjdfvnjdlsfnvjsdfvjksdfjvnsdfjvnsd kdsjfv sdjfv djofvjd vjsdf vjksdfvjks dfkjbsdfjbv sdo bjdkbsd'
+      title: 'Of The Day',
+      Description : 'A social media application for promoting different of the day entities of users such as outfit of the day, shoes of the day etc',
+      Techstack : 'React Native, Express Js, Node Js, Mongo Db, Git',
+      Location : 'Aeons Technology',
+      Role: 'Backend Developer'
     }
   ]
 
   const renderProjects = () => {
     return project.map((e,key) => {
       return(
-        <div className='col-12 col-md-3 d-flex align-items-center m-1'>
-          <Card style={{backgroundColor:'black', boxShadow:'0 0 10px rgba(255, 255, 255, 1)'}}>
+        <div className='col-12 col-md-5 col-xl-3 d-flex align-items-center m-3'>
+          <Card style={{backgroundColor:'black', boxShadow:'0 0 10px rgba(255, 255, 255, 1)', width: '190%', height: '100%', alignContent:'center'}}>
             <CardHeader>
               <CardTitle>
                 <h3 style={{color:'white'}}>
@@ -60,10 +80,42 @@ function About() {
                 </h3>
               </CardTitle>
             </CardHeader>
-            <CardBody>
+            <CardBody style={{alignContent:'center'}}>
               <p style={{color:'white'}}>
                 {e.Description}
               </p>
+              <ul>
+                <li className='mt-2'>
+                  <div className='row d-flex justify-content-left'>
+                    <div className='col-10 col-md-6 col-lg-8 col-xl-6 d-flex align-items-center'>
+                      <Label style={{color:'white'}}><strong>Tech Stack :</strong></Label>
+                    </div>
+                    <div className='col-10 col-md-6 col-lg-8 col-xl-6 d-flex align-items-center'>
+                      <Label style={{color:'white'}}><strong>{e.Techstack}</strong></Label>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className='row d-flex justify-content-left'>
+                    <div className='col-10 col-md-6 d-flex align-items-center'>
+                      <Label style={{color:'white'}}><strong>Location :</strong></Label>
+                    </div>
+                    <div className='col-10 col-md-6 d-flex align-items-center'>
+                      <Label style={{color:'white'}}><strong>{e.Location}</strong></Label>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className='row d-flex justify-content-left gx-5'>
+                    <div className='col-10 col-md-6 d-flex align-items-center'>
+                      <Label style={{color:'white'}}><strong>Role :</strong></Label>
+                    </div>
+                    <div className='col-10 col-md-6 d-flex align-items-center'>
+                      <Label style={{color:'white'}}><strong>{e.Role}</strong></Label>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </CardBody>
           </Card>
         </div>
@@ -208,7 +260,7 @@ function About() {
             <h5>Smart India Hackathon 2022</h5>
               Responsibilities :
               <ul>
-                <li>Develop mobile game to promote physical activities among different individuals of different age group</li>
+                <li>Develop mechanism for spreading information related to government schemes in rural areas of India</li>
                 <li>Manage the data gathered by the game, and prepare it for analysis</li>
                 <li>Tech stack : React Native, Express Js, Node JS, Google Apis, Mongo Db</li>
               </ul>
@@ -218,17 +270,14 @@ function About() {
         <br></br>
         <div className='row d-flex justify-content-center m-3'>
           <div className='col-10 col-md-8 m-3 d-flex align-items-center'>
-            <p style={{color:'white'}}>
-              bvdfkjvnjdlf
-              dfkhbvsdkjflvnksd
-              dbjvbdfkvjdfsv
-              djvbdfjkjsdfv
-              ndfjvbdfjkad
-              djfvbhsdkjsdv
-              dfkjvnlsdfv
-              dfvbkshdjfvnjldsfv'
-              dfjbvdhfvkhsdjvsdf
-              dfnvkljdsfjvn
+          <p style={{color:'white'}}>
+            <h5>Smart India Hackathon 2020</h5>
+              Responsibilities :
+              <ul>
+                <li>Develop voice based interface for enabling access of website of Ministry of Rural Development, India for physically disabled persons</li>
+                <li>Gathering data from the website of Ministry of Rural Development and integrating the data with the interface</li>
+                <li>Tech stack : Python, Flask, Django, Beautiful Soup</li>
+              </ul>
             </p>
           </div>
           <div className='col-10 col-md-3 m-3 d-flex align-items-center'>
